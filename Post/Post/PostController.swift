@@ -10,6 +10,7 @@ import Foundation
 
 class PostController {
     
+    
     static let baseURL = NSURL(string: "https://devmtn-post.firebaseio.com/posts/")
     static let endpoint = baseURL?.URLByAppendingPathExtension("json")
     
@@ -26,7 +27,8 @@ class PostController {
                     return }
             
             let posts = JSONSerialized.flatMap({Post(dictionary: $0.1, identifier: $0.0)})
-            completion(post: posts)
+            let sortedPosts = posts.sort { $1.timestamp < $0.timestamp }
+            completion(post: sortedPosts)
             
             
         }

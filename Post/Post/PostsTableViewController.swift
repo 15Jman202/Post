@@ -10,6 +10,23 @@ import UIKit
 
 class PostsTableViewController: UITableViewController {
     
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        let post = posts[indexPath.row]
+        if post.text.characters.count > 50 || post.username.characters.count > 50 {
+            return 70.0
+        } else if post.text.characters.count > 75 && post.username.characters.count > 75 {
+            return 150.0
+        } else {
+            return 45.0
+        }
+    }
+    
+    @IBAction func refreshController(sender: AnyObject) {
+    
+        tableView.reloadData()
+        refreshControl?.endRefreshing()
+    }
+    
     var posts: [Post] = []
 
     override func viewDidLoad() {
