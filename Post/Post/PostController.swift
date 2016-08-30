@@ -10,9 +10,25 @@ import Foundation
 
 class PostController {
     
-    static let sharedController = PostController()
+    static let baseURL = NSURL(string: "https://devmtn-post.firebaseio.com/posts/")
+    static let endpoint = baseURL?.URLByAppendingPathExtension("json")
     
-    
-    
-    
+    static func getPosts(completion: (post: [Post]?) -> Void) {
+        
+        guard let url = PostController.endpoint else { completion(post: nil); return }
+        
+        NetworkController.performRequestForURL(url, httpMethod: .Get) { (data, error) in
+            guard let data = data,
+            JSONSerialized = ( try? NSJSONSerialization.JSONObjectWithData(data, options: .AllowFragments)) as? [String: [String: AnyObject]]
+                else {
+                    print("Unable to serialize JSON.")
+                    completion(post: [])
+                    return }
+            
+            let posts = JSONSerialized.flatMap({Post(dictionary: $0.1, identifier: $0.0)})
+            completion(post: posts)
+            
+            
+        }
+    }
 }

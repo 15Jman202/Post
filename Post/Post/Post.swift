@@ -13,6 +13,7 @@ class Post {
     private let kUsername = "username"
     private let kText = "text"
     private let kTimeStamp = "timestamp"
+    private let kIdentifier = "uuid"
     
     let username: String
     let text: String
