@@ -10,4 +10,34 @@ import Foundation
 
 class Post {
     
+    private let kUsername = "username"
+    private let kText = "text"
+    private let kTimeStamp = "timestamp"
+    
+    let username: String
+    let text: String
+    let timestamp: NSTimeInterval
+    let identifier: NSUUID
+    
+    init(username: String, text: String, identifier: NSUUID = NSUUID()) {
+        self.username = username
+        self.text = text
+        self.timestamp = NSDate().timeIntervalSince1970
+        self.identifier = identifier
+    }
+    
+    init?(dictionary: [String: AnyObject], identifier: String) {
+        
+        guard let username = dictionary[kUsername] as? String,
+            let text = dictionary[kText] as? String,
+            let timestamp = dictionary[kTimeStamp] as? Double,
+            let identifier = NSUUID(UUIDString: identifier)
+
+            else { return nil }
+        
+        self.username = username
+        self.text = text
+        self.timestamp = timestamp
+        self.identifier = identifier
+    }
 }

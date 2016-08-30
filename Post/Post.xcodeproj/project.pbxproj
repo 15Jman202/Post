@@ -85,8 +85,8 @@
 		D07E1BA11D75DDF200C9D752 /* Post */ = {
 			isa = PBXGroup;
 			children = (
-				D0527D231D761D0300E50924 /* View Controllers */,
 				D0527D221D761CF900E50924 /* Model */,
+				D0527D231D761D0300E50924 /* View Controllers */,
 				D0527D211D761CEE00E50924 /* Model Controller */,
 				D07E1BA21D75DDF200C9D752 /* AppDelegate.swift */,
 				D07E1BA61D75DDF200C9D752 /* Main.storyboard */,
