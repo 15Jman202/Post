@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D0527D1C1D761C3600E50924 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0527D1B1D761C3600E50924 /* Post.swift */; };
+		D0527D1E1D761C4100E50924 /* PostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0527D1D1D761C4100E50924 /* PostController.swift */; };
+		D0527D201D761C5300E50924 /* PostsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0527D1F1D761C5300E50924 /* PostsTableViewController.swift */; };
+		D0527D251D761D8300E50924 /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0527D241D761D8300E50924 /* NetworkController.swift */; };
 		D07E1BA31D75DDF200C9D752 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07E1BA21D75DDF200C9D752 /* AppDelegate.swift */; };
 		D07E1BA81D75DDF200C9D752 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D07E1BA61D75DDF200C9D752 /* Main.storyboard */; };
 		D07E1BAA1D75DDF200C9D752 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D07E1BA91D75DDF200C9D752 /* Assets.xcassets */; };
@@ -14,6 +18,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D0527D1B1D761C3600E50924 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		D0527D1D1D761C4100E50924 /* PostController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostController.swift; sourceTree = "<group>"; };
+		D0527D1F1D761C5300E50924 /* PostsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostsTableViewController.swift; sourceTree = "<group>"; };
+		D0527D241D761D8300E50924 /* NetworkController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkController.swift; sourceTree = "<group>"; };
 		D07E1B9F1D75DDF200C9D752 /* Post.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Post.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D07E1BA21D75DDF200C9D752 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D07E1BA71D75DDF200C9D752 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -33,6 +41,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D0527D211D761CEE00E50924 /* Model Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D0527D1D1D761C4100E50924 /* PostController.swift */,
+				D0527D241D761D8300E50924 /* NetworkController.swift */,
+			);
+			name = "Model Controller";
+			sourceTree = "<group>";
+		};
+		D0527D221D761CF900E50924 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D0527D1B1D761C3600E50924 /* Post.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		D0527D231D761D0300E50924 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D0527D1F1D761C5300E50924 /* PostsTableViewController.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
 		D07E1B961D75DDF200C9D752 = {
 			isa = PBXGroup;
 			children = (
@@ -52,6 +85,9 @@
 		D07E1BA11D75DDF200C9D752 /* Post */ = {
 			isa = PBXGroup;
 			children = (
+				D0527D231D761D0300E50924 /* View Controllers */,
+				D0527D221D761CF900E50924 /* Model */,
+				D0527D211D761CEE00E50924 /* Model Controller */,
 				D07E1BA21D75DDF200C9D752 /* AppDelegate.swift */,
 				D07E1BA61D75DDF200C9D752 /* Main.storyboard */,
 				D07E1BA91D75DDF200C9D752 /* Assets.xcassets */,
@@ -133,7 +169,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0527D251D761D8300E50924 /* NetworkController.swift in Sources */,
 				D07E1BA31D75DDF200C9D752 /* AppDelegate.swift in Sources */,
+				D0527D201D761C5300E50924 /* PostsTableViewController.swift in Sources */,
+				D0527D1C1D761C3600E50924 /* Post.swift in Sources */,
+				D0527D1E1D761C4100E50924 /* PostController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,6 +325,7 @@
 				D07E1BB31D75DDF200C9D752 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
